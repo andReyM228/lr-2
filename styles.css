@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "nav header header"
+        "main main aside"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #87CEEB; /* Голубой */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    height: 80px;
+    width: 1600px;
+    margin-left: -400px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #FF6F61; /* Красный */
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+    height: 35px;
+    width: 550px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #ade8d0; /* Светло-зелёный */
+    text-align: center;
+    padding: 20px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #4CAF50; /* Зелёный */
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #DDA0DD; /* Фиолетовый */
+    text-align: center;
+    padding: 10px;
+    height: 80px;
+}
